@@ -13,20 +13,19 @@
   <meta name="msapplication-navbutton-color" content="#6E0F1F">
 
   <title>Shawarmer IT Operations</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/favicon.svg">
-  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.json">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 <div id="app">
 
-  <!-- Loading Screen -->
   <div id="screenLoading" class="screen">
     <div class="loader-wrap">
       <div class="loader-brand">
@@ -47,7 +46,6 @@
     </div>
   </div>
 
-  <!-- Login Screen -->
   <div id="screenLogin" class="screen hidden">
     <div class="login-page">
       <div class="login-card">
@@ -89,10 +87,8 @@
     </div>
   </div>
 
-  <!-- Main App -->
   <div id="screenApp" class="screen hidden app-layout">
 
-    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-brand">
         <div class="sidebar-logo">
@@ -128,12 +124,9 @@
       </div>
     </aside>
 
-    <!-- Sidebar Overlay (mobile) -->
     <div class="sidebar-overlay hidden" id="sidebarOverlay" onclick="APP.toggleSidebar()"></div>
 
-    <!-- Main Content Area -->
     <div class="main-wrap">
-      <!-- Top Header -->
       <header class="topbar">
         <div class="topbar-left">
           <button class="sidebar-toggle" onclick="APP.toggleSidebar()" aria-label="Toggle menu">
@@ -170,7 +163,6 @@
         </div>
       </header>
 
-      <!-- Content -->
       <main class="main-content" id="mainContent">
         <div class="content-loading hidden" id="contentLoader">
           <div class="spinner"></div>
@@ -179,7 +171,6 @@
       </main>
     </div>
 
-    <!-- Mobile Bottom Navigation -->
     <nav class="mobile-nav" id="mobileNav">
       <div class="mobile-nav-item active" data-tab="dashboard" onclick="APP.showTab('dashboard')">
         <i class="ti ti-layout-dashboard"></i>
@@ -205,7 +196,6 @@
     </nav>
   </div>
 
-  <!-- Modal -->
   <div class="modal-overlay hidden" id="modalOverlay" onclick="handleOverlayClick(event)">
     <div class="modal-box" id="modalBox">
       <div class="modal-header">
@@ -217,10 +207,8 @@
     </div>
   </div>
 
-  <!-- Toast Stack -->
   <div class="toast-stack" id="toastStack"></div>
 
-  <!-- Notifications Panel -->
   <div class="notif-panel hidden" id="notifPanel">
     <div class="notif-panel-header">
       <span><i class="ti ti-bell"></i> Notifications</span>
@@ -231,30 +219,28 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="js/config.js"></script>
-<script src="js/api.js"></script>
-<script src="js/state.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/notifications.js"></script>
-<script src="js/communication.js"></script>
-<script src="js/views/dashboard.js"></script>
-<script src="js/views/stores.js"></script>
-<script src="js/views/critical.js"></script>
-<script src="js/views/reports.js"></script>
-<script src="js/views/engineers.js"></script>
-<script src="js/views/alerts.js"></script>
-<script src="js/views/admin.js"></script>
-<script src="js/views/auditlog.js"></script>
-<script src="js/views/history.js"></script>
-<script src="js/views/profile.js"></script>
-<script src="js/modals.js"></script>
-<script src="js/app.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/state.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/notifications.js"></script>
+<script src="./js/communication.js"></script>
+<script src="./js/views/dashboard.js"></script>
+<script src="./js/views/stores.js"></script>
+<script src="./js/views/critical.js"></script>
+<script src="./js/views/reports.js"></script>
+<script src="./js/views/engineers.js"></script>
+<script src="./js/views/alerts.js"></script>
+<script src="./js/views/admin.js"></script>
+<script src="./js/views/auditlog.js"></script>
+<script src="./js/views/history.js"></script>
+<script src="./js/views/profile.js"></script>
+<script src="./js/modals.js"></script>
+<script src="./js/app.js"></script>
 
-<!-- Service Worker -->
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
   }
 
   // PWA Install prompt
