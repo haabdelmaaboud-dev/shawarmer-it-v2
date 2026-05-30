@@ -1,6 +1,6 @@
 // Shawarmer IT — Configuration
 const APP_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbz4gxMy_T7MiyO2tUsIOlJZpTw37wJrhJMoJ_wlVc8k0TL3Gt_J4u5fcCbRMMRDn4iK/exec",
+  API_URL: "https://script.google.com/macros/s/AKfycbxV7HI-phO7U0mHG5e-JXahv8hP24pcPuxepa7rFagdcTWPQgjTORMEkr89bl7iY5oo/exec",
   MAX_RETRIES: 3,
   RETRY_DELAY: 1000,
   LAST_TAB: localStorage.getItem("shawarmer_last_tab") || "dashboard"
