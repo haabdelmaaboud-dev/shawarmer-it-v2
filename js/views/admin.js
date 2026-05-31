@@ -121,5 +121,3 @@ const AdminActions = {
   }
 };
 
-// Keep ADMIN alias for backward compatibility
-const ADMIN = AdminActions;
